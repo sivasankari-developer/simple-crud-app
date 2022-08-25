@@ -17,7 +17,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <ng-container *ngIf="employeeList.length;else elseBlock">
+                        <ng-container *ngIf="employeeList.length;else noEmployee">
                             <tr *ngFor="let employee of employeeList;">
                                 <td id="td1">{{employee.id}}</td>
                                 <td>{{employee.name}}</td>
@@ -32,9 +32,9 @@
                                 </td>
                             </tr>
                         </ng-container>
-                        <ng-template #elseBlock>
+                        <ng-template #noEmployee>
                             <tr>
-                                <td colspan="4" class="text-center">No Employee</td>
+                                <td colspan="4" class="text-center">Employee Not Found</td>
                             </tr>
                         </ng-template>
                     </tbody>
