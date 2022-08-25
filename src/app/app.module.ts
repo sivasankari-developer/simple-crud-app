@@ -29,8 +29,7 @@ import { EmployeescrudService } from './employees/employeescrud.service';
     SliderModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
-    
+    BrowserAnimationsModule, 
 
   ],
   providers: [EmployeescrudService],

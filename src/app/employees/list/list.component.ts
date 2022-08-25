@@ -16,14 +16,12 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.employeeList = this.employeeService.getEmployees();
-    console.log("add elist=", this.employeeList)
   }
 
   deleteEmployeebyId(id: number) {
     var result = confirm("Want to delete?");
     if (result) {
       this.employeeService.deleteEmployee(id);
-      console.log(id);
       console.log('Deleted');
     } else {
       console.log('Not deleted');
@@ -31,9 +29,7 @@ export class ListComponent implements OnInit {
   }
 
   onSearch(keyTerm: any) {
-    console.log("emplist=",this.employeeList);
     this.employeeList = this.employeeService.findByName(keyTerm);
-    console.log("Aemplist=",this.employeeList);
   }
 }
 

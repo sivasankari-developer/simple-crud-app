@@ -8,7 +8,7 @@ import { EmployeescrudService } from '../employeescrud.service';
 })
 export class SearchComponent implements OnInit {
   @Output() search = new EventEmitter<string>();
-  constructor(private employeeService: EmployeescrudService) { }
+  constructor() { }
 
   ngOnInit(): void {
 

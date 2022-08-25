@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddEditComponent } from './employees/add-edit/add-edit.component';
-import { EmployeesComponent } from './employees/employees.component';
 
 const routes: Routes = [
- {
+  {
     path: '',
-    pathMatch:"full",
+    pathMatch: "full",
     redirectTo: "/employees/list"
   },
   {
