@@ -10,10 +10,10 @@ import { EmployeescrudService } from '../employeescrud.service';
 })
 export class AddEditComponent implements OnInit {
   // define empty object
-  employee:iEmployee = {} as iEmployee;
+  employee: iEmployee = {} as iEmployee;
 
   constructor(public employeeService: EmployeescrudService, private router: Router, private route: ActivatedRoute) {
-    console.log("route", this.route);
+
   }
 
   ngOnInit(): void {
@@ -24,7 +24,6 @@ export class AddEditComponent implements OnInit {
   }
 
   onSubmit(value: any) {
-    console.log("addvalue=",value);
     if (this.employee.id) {
       this.employeeService.updateEmployee(this.employee.id, value.employeename);
     } else {
